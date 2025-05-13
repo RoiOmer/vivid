@@ -150,12 +150,18 @@ header h1 {
 }
 
 /* Centered Bio Section with More Space */
+
+/* Bio Styling */
 .bio {
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
-  padding: 60px 30px;
+  padding: 20px 25px 90px 25px; /* minimal top padding to reduce space under logo */
+  font-size: 0.9rem;
+  line-height: 1.9rem;
+  color: #ccc;
   text-align: center;
 }
+
 
 .bio h1 {
   font-size: 3rem;
