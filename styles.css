@@ -49,6 +49,13 @@ html, body {
   width: auto;
 }
 
+#logo img {
+  height: clamp(50px, 10vw, 120px); /* Responsive between 50px and 120px */
+  width: auto;
+  display: block;
+}
+
+
 
 /* Loading Screen */
 #loading-screen {
