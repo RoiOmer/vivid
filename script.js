@@ -28,25 +28,32 @@ window.addEventListener('load', () => {
     }
   }
 
-  function draw() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = 'rgba(255, 68, 68, 0.3)';
-    ctx.lineWidth = 1;
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = 'rgba(255, 68, 68, 0.05)';
+  ctx.lineWidth = 1;
 
-    for (let i = 0; i < points.length; i++) {
-      for (let j = i + 1; j < points.length; j++) {
-        const dx = points[i].x - points[j].x;
-        const dy = points[i].y - points[j].y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+  for (let i = 0; i < points.length; i++) {
+    points[i].x += Math.sin(Date.now() * 0.0005 + i) * 0.2;
+    points[i].y += Math.cos(Date.now() * 0.0005 + i) * 0.2;
 
-        if (distance < 200) {
-          ctx.beginPath();
-          ctx.moveTo(points[i].x, points[i].y);
-          ctx.lineTo(points[j].x, points[j].y);
-          ctx.stroke();
-        }
+    for (let j = i + 1; j < points.length; j++) {
+      const dx = points[i].x - points[j].x;
+      const dy = points[i].y - points[j].y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < 150) {
+        ctx.beginPath();
+        ctx.moveTo(points[i].x, points[i].y);
+        ctx.lineTo(points[j].x, points[j].y);
+        ctx.stroke();
       }
     }
+  }
+
+  requestAnimationFrame(draw);
+}
+
 
     requestAnimationFrame(draw);
   }
