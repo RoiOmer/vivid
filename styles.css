@@ -100,7 +100,7 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease;
   text-align: center;
-  padding-top: 20px;
+  padding-top: 10px;
   max-width: 100%;
   margin: auto;
 }
