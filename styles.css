@@ -273,15 +273,15 @@ header h1 {
 }
 
 .loading-text {
-  font-size: clamp(0.5rem, 2vw, 1rem); /* Smaller text */
-  letter-spacing: 0.1rem;              /* Less space between letters */
+  font-size: clamp(0.5rem, 2vw, 1rem); /* Small text */
+  letter-spacing: 0.1rem;              /* Tight letter spacing */
   color: #ff4444;
   font-weight: bold;
   animation: glow 2.5s ease-in-out infinite alternate;
-  text-shadow: 0 0 5px #ff4444aa;      /* Smaller shadow */
   text-align: center;
-  padding: 0 2vw;                      /* Less side padding */
+  padding: 0 2vw;
   word-break: break-word;
+  text-shadow: none;                   /* Remove all text shadows */
 }
 
 
