@@ -27,6 +27,11 @@ window.addEventListener('load', () => {
       });
     }
   }
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = 200; // Limit the canvas height to 200px
+  generatePoints();
+}
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
