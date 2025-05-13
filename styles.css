@@ -25,8 +25,8 @@ html, body {
 
 #logo {
   position: fixed;
-  top: 20px;
-  left: 20px;
+  top: clamp(10px, 2vw, 20px);
+  left: clamp(10px, 2vw, 20px);
   z-index: 20;
 }
 
