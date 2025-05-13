@@ -21,8 +21,8 @@
       document.getElementById('main-content').classList.add('visible');
       document.getElementById('logo').classList.remove('hidden');
       document.getElementById('logo').classList.add('visible');
-    }, 1000); // Matches the fade-out duration
-  }, 2000); // Delay before fading out
+    }, 1500); // Matches the fade-out duration
+  }, 3000); // Delay before fading out
 });
 
     window.addEventListener('load', () => {
