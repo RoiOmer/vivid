@@ -222,3 +222,24 @@ header h1 {
   transition: opacity 1s ease;
 }
 
+/* Loading Text FX */
+.loading-text {
+  font-size: 2.2rem;
+  letter-spacing: 0.4rem;
+  color: #ff4444;
+  font-weight: bold;
+  animation: glow 2.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #ff4444aa;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ff4444aa, 0 0 20px #ff0000aa;
+    transform: scale(1);
+  }
+  100% {
+    text-shadow: 0 0 30px #ff4444, 0 0 60px #ff0000;
+    transform: scale(1.05);
+  }
+}
+
