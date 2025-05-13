@@ -47,10 +47,11 @@ html, body {
 
 
 #logo img {
-  width: 400px;
+  width: clamp(150px, 40vw, 600px); /* Responsive width between 150px and 600px */
   height: auto;
   display: block;
 }
+
 
 
 
