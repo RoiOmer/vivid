@@ -23,7 +23,7 @@ body {
 .coral-pulse {
   width: 60vw;
   height: 60vw;
-  background-image: url('your-transparent-coral.png'); /* Replace with your actual coral */
+  background-image: url('your-coral.png'); /* Replace with your actual coral */
   background-size: cover;
   background-position: center;
   animation: pulse 4s infinite ease-in-out;
