@@ -57,3 +57,18 @@ header h1 {
   color: #ff8888;
   border-bottom: 2px solid white;
 }
+
+.coral-pulse {
+  width: 60vw;
+  height: 60vw;
+  background-image: url('your-coral-image.png'); /* Replace with your coral image path */
+  background-size: cover;
+  background-position: center;
+  animation: pulse 4s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
