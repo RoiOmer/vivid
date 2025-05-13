@@ -1,11 +1,13 @@
+/* Base Styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background-color: #000;
+  background: linear-gradient(135deg, #010103, #050505);
   color: white;
   overflow: hidden;
 }
 
+/* Loading Screen */
 #loading-screen {
   position: fixed;
   width: 100%;
@@ -17,11 +19,23 @@ body {
   z-index: 10;
 }
 
-.coral-animation {
+/* Coral Pulse Animation */
+.coral-pulse {
   width: 60vw;
-  height: auto;
+  height: 60vw;
+  background-image: url('your-transparent-coral.png'); /* Replace with your actual coral */
+  background-size: cover;
+  background-position: center;
+  animation: pulse 4s infinite ease-in-out;
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Main Content Appearance */
 #main-content {
   opacity: 0;
   transition: opacity 1.5s ease;
@@ -34,13 +48,16 @@ body {
   overflow: auto;
 }
 
+/* Header Styles */
 header h1 {
   font-size: 3rem;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
   margin-bottom: 40px;
   color: #ff4444;
+  text-shadow: 0 0 10px #ff4444aa;
 }
 
+/* Links Section */
 .links a {
   display: block;
   font-size: 1.5rem;
@@ -51,27 +68,26 @@ header h1 {
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.3s ease;
 }
 
+/* Hover Effects */
 .links a:hover {
+  color: #ff8888;
   border-bottom-color: white;
+  text-shadow: 0 0 5px #ff4444;
+  transform: scale(1.05);
 }
 
-
-
-
-
-.coral-pulse {
-  width: 60vw;
-  height: 60vw;
-  background-image: url('your-coral-image.png'); /* Replace with your coral image path */
-  background-size: cover;
-  background-position: center;
-  animation: pulse 4s infinite ease-in-out;
+/* Optional Background Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.05); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
+body {
+  background: linear-gradient(-45deg, #010103, #050505, #010103, #050505);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
 }
