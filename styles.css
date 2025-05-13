@@ -64,7 +64,7 @@ html, body {
 .loading-text {
   font-size: clamp(1.5rem, 8vw, 3rem);
   letter-spacing: 0.2rem;
-  color: #ff4444;
+  color: white;
   font-weight: bold;
   animation: glow 2.5s ease-in-out infinite alternate;
   text-shadow: 0 0 10px #ff4444aa;
