@@ -313,8 +313,6 @@ body {
   display: block;
 }
 
-/* Geometric Lines Layer */
-/* Geometric Lines Layer */
 #geometric-lines {
   position: fixed;
   top: 0;
@@ -325,10 +323,11 @@ body {
     linear-gradient(45deg, white 1px, transparent 1px),
     linear-gradient(-45deg, red 1px, transparent 1px);
   background-size: 50px 50px;
-  z-index: 0;
+  z-index: 9999; /* Force on top for visibility test */
   pointer-events: none;
-  animation: moveLines 20s linear infinite;
 }
+
+
 
 @keyframes moveLines {
   0% { background-position: 0 0, 0 0; }
