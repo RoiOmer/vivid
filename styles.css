@@ -228,13 +228,17 @@ header h1 {
 
 /* Loading Text FX */
 .loading-text {
-  font-size: 2.2rem;
+  font-size: clamp(1.5rem, 6vw, 3rem);
   letter-spacing: 0.4rem;
   color: #ff4444;
   font-weight: bold;
-  animation: hueShift 5s linear infinite;
-  filter: hue-rotate(0deg);
+  animation: glow 2.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #ff4444aa;
+  text-align: center;
+  padding: 0 20px;
+  word-break: break-word;
 }
+
 
 @keyframes hueShift {
   0% { filter: hue-rotate(0deg); }
