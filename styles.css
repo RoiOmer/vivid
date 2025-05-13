@@ -256,15 +256,15 @@ header h1 {
   letter-spacing: 2px;
   text-shadow: 0 0 10px #ff4444aa;
   color: #ff4444;
-  animation: hueShiftLogo 5s linear infinite;
-  filter: hue-rotate(0deg);
+  animation: redWhiteShift 3s linear infinite;
 }
 
-@keyframes hueShiftLogo {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(180deg); }
-  100% { filter: hue-rotate(360deg); }
+@keyframes redWhiteShift {
+  0%   { color: #ff4444; }
+  50%  { color: #ffffff; }
+  100% { color: #ff4444; }
 }
+
 
 
 
