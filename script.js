@@ -1,11 +1,25 @@
+// window.addEventListener('load', () => {
+  //setTimeout(() => {
+    //document.getElementById('loading-screen').style.display = 'none';
+    //const main = document.getElementById('main-content');
+    //main.classList.remove('hidden');
+    //main.classList.add('visible');
+  //}, 50); // 3.5 seconds coral animation
+//}); 
+
 window.addEventListener('load', () => {
   setTimeout(() => {
-    document.getElementById('loading-screen').style.display = 'none';
-    const main = document.getElementById('main-content');
-    main.classList.remove('hidden');
-    main.classList.add('visible');
-  }, 50); // 3.5 seconds coral animation
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('fade-out');
+    setTimeout(() => {
+      loadingScreen.style.display = 'none';
+      document.getElementById('main-content').classList.add('visible');
+      document.getElementById('logo').classList.remove('hidden');
+      document.getElementById('logo').classList.add('visible');
+    }, 1000); // Matches the fade-out duration
+  }, 2000); // Delay before fading out
 });
+
 
 <script>
   const canvas = document.getElementById('geometricCanvas');
@@ -71,3 +85,5 @@ function draw() {
   resizeCanvas();
   draw();
 </script>
+
+
