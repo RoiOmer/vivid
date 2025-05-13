@@ -149,6 +149,51 @@ header h1 {
   transition: color 0.3s ease;
 }
 
+/* Centered Bio Section */
+.bio {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bio h1 {
+  font-size: 3rem;
+  color: #ff4444;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px #ff0000;
+  margin-bottom: 20px;
+}
+
+.bio p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+/* Social Icons at Bottom */
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 20;
+}
+
+.social-icons a {
+  color: #ff4444;
+  font-size: 2rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+
 .links a:hover i {
   color: white;
 }
