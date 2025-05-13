@@ -1,10 +1,19 @@
-/* Base Styles */
+/* Reset and Base Styles */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #010103, #050505);
+  background: linear-gradient(-45deg, #010103, #050505, #010103, #050505);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
   color: white;
   overflow: hidden;
+}
+
+/* Animated Background Gradient */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Loading Screen */
@@ -19,23 +28,22 @@ body {
   z-index: 10;
 }
 
-/* Coral Pulse Animation */
+/* Coral Animation */
 .coral-pulse {
   width: 60vw;
   height: 60vw;
-  background-image: url('your-coral-image.png'); /* Replace with your actual coral */
+  background-image: url('your-transparent-coral.png');
   background-size: cover;
   background-position: center;
   animation: pulse 4s infinite ease-in-out;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
+  0%, 100% { transform: scale(1); opacity: 1; }
   50% { transform: scale(1.05); opacity: 0.85; }
-  100% { transform: scale(1); opacity: 1; }
 }
 
-/* Main Content Appearance */
+/* Main Content Fade In */
 #main-content {
   opacity: 0;
   transition: opacity 1.5s ease;
@@ -48,46 +56,44 @@ body {
   overflow: auto;
 }
 
-/* Header Styles */
+/* Header Styling */
 header h1 {
-  font-size: 3rem;
-  letter-spacing: 4px;
-  margin-bottom: 40px;
+  font-size: 3.5rem;
+  letter-spacing: 6px;
+  margin-bottom: 50px;
   color: #ff4444;
-  text-shadow: 0 0 10px #ff4444aa;
+  text-shadow: 0 0 20px #ff0000;
 }
 
-/* Links Section */
+/* Link Styling */
 .links a {
   display: block;
-  font-size: 1.5rem;
-  margin: 20px;
+  font-size: 1.8rem;
+  margin: 30px auto;
   color: white;
   text-decoration: none;
-  border-bottom: 2px solid #ff4444;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
   transition: all 0.3s ease;
 }
 
-/* Hover Effects */
+/* No Line Initially */
+.links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #ff4444;
+  transition: width 0.3s;
+  margin: auto;
+}
+
+/* Visible Line & Effects on Hover */
+.links a:hover::after {
+  width: 100%;
+}
+
 .links a:hover {
-  color: #ff8888;
-  border-bottom-color: white;
-  text-shadow: 0 0 5px #ff4444;
-  transform: scale(1.05);
-}
-
-/* Optional Background Animation */
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-body {
-  background: linear-gradient(-45deg, #010103, #050505, #010103, #050505);
-  background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  color: #ff4444;
+  text-shadow: 0 0 10px #ff4444, 0 0 20px #ff0000;
+  transform: translateY(-3px) scale(1.05);
 }
