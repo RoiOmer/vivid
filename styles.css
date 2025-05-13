@@ -37,12 +37,18 @@ html, body {
 
 
 
-#logo h2 {
+/*#logo h2 {
   font-size: 1.2rem;
   color: #ff4444;
   letter-spacing: 2px;
   text-shadow: 0 0 10px #ff4444aa;
+}*/
+
+#logo img {
+  height: 40px;
+  width: auto;
 }
+
 
 /* Loading Screen */
 #loading-screen {
