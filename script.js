@@ -22,6 +22,21 @@ window.addEventListener('load', () => {
 
 
 <script>
+
+    window.addEventListener('load', () => {
+    setTimeout(() => {
+      const loadingScreen = document.getElementById('loading-screen');
+      loadingScreen.classList.add('fade-out'); // Smooth fade
+
+      setTimeout(() => {
+        loadingScreen.style.display = 'none'; // Fully hide after fade
+        document.getElementById('main-content').classList.add('visible');
+        document.getElementById('logo').classList.remove('hidden');
+        document.getElementById('logo').classList.add('visible');
+      }, 1000); // Wait for fade-out to finish
+    }, 3500); // Duration of loading before fading out
+  });
+
   const canvas = document.getElementById('geometricCanvas');
   const ctx = canvas.getContext('2d');
   let points = [];
