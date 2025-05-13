@@ -250,4 +250,21 @@ header h1 {
   transition: opacity 1s ease;
 }
 
+/* Always-Hue-Shifting Logo */
+#logo h2 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #ff4444aa;
+  color: #ff4444;
+  animation: hueShiftLogo 5s linear infinite;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes hueShiftLogo {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+
+
 
