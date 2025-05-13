@@ -47,15 +47,16 @@
     </section>
   </div>
 
-  <script>
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loading-screen').style.display = 'none';
-        const main = document.getElementById('main-content');
-        main.classList.remove('hidden');
-        main.classList.add('visible');
-      }, 3500);
-    });
-  </script>
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main-content').classList.add('visible');
+      document.getElementById('logo').classList.remove('hidden');
+      document.getElementById('logo').classList.add('visible');
+    }, 3500); // Loading duration
+  });
+</script>
+
 </body>
 </html>
