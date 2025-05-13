@@ -228,20 +228,16 @@ header h1 {
   letter-spacing: 0.4rem;
   color: #ff4444;
   font-weight: bold;
-  animation: glow 2.5s ease-in-out infinite alternate;
-  text-shadow: 0 0 10px #ff4444aa;
+  animation: hueShift 5s linear infinite;
+  filter: hue-rotate(0deg);
 }
 
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 10px #ff4444aa, 0 0 20px #ff0000aa;
-    transform: scale(1);
-  }
-  100% {
-    text-shadow: 0 0 30px #ff4444, 0 0 60px #ff0000;
-    transform: scale(1.05);
-  }
+@keyframes hueShift {
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(180deg); }
+  100% { filter: hue-rotate(360deg); }
 }
+
 
 /* Logo hidden by default */
 #logo.hidden {
