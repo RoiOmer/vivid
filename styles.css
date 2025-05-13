@@ -46,14 +46,6 @@ html, body {
 
 
 
-#logo img {
-  width: clamp(150px, 40vw, 600px); /* Responsive width between 150px and 600px */
-  height: auto;
-  display: block;
-}
-
-
-
 
 /* Loading Screen */
 #loading-screen {
@@ -88,7 +80,7 @@ html, body {
   opacity: 0;
   transition: opacity 1.5s ease;
   text-align: center;
-  padding-top: 120px;
+  padding-top: 20px;
   max-width: 100%;
   margin: auto;
 }
