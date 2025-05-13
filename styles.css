@@ -45,13 +45,15 @@ header h1 {
   display: block;
   font-size: 1.5rem;
   margin: 20px;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: #ff4444;
+  text-decoration-thickness: 2px;
   color: white;
-  border-bottom: 2px solid #ff4444;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
 }
+
 
 
 .links a:hover {
