@@ -34,6 +34,12 @@ html, body {
   z-index: 20;
 }
 
+/* Hide geometric animation on screens smaller than 768px */
+@media (max-width: 768px) {
+  #geometricCanvas {
+    display: none;
+  }
+}
 
 
 
