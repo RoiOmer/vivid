@@ -243,3 +243,15 @@ header h1 {
   }
 }
 
+/* Logo hidden by default */
+#logo.hidden {
+  opacity: 0;
+}
+
+/* Logo visible after loading */
+#logo.visible {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+
