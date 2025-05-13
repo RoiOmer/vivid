@@ -7,7 +7,12 @@
   //}, 50); // 3.5 seconds coral animation
 //}); 
 
-window.addEventListener('load', () => {
+
+
+
+<script>
+
+  window.addEventListener('load', () => {
   setTimeout(() => {
     const loadingScreen = document.getElementById('loading-screen');
     loadingScreen.classList.add('fade-out');
@@ -19,9 +24,6 @@ window.addEventListener('load', () => {
     }, 1000); // Matches the fade-out duration
   }, 2000); // Delay before fading out
 });
-
-
-<script>
 
     window.addEventListener('load', () => {
     setTimeout(() => {
