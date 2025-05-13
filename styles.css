@@ -53,6 +53,11 @@ header h1 {
   margin-right: auto;
 }
 
+.links a:hover {
+  border-bottom-color: white;
+}
+
+
 
 
 
