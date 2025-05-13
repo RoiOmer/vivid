@@ -56,11 +56,6 @@ header h1 {
 
 
 
-.links a:hover {
-  color: #ff8888;
-#  border-bottom: 2px solid white;
-}
-
 .coral-pulse {
   width: 60vw;
   height: 60vw;
