@@ -212,3 +212,13 @@ header h1 {
   color: white;
 }
 
+/* Logo stays hidden at first, shows after loading */
+#logo.hidden {
+  opacity: 0;
+}
+
+#logo.visible {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
