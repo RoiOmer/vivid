@@ -142,3 +142,14 @@ header h1 {
     font-size: 1rem;
   }
 }
+
+.links a i {
+  margin-right: 10px;
+  color: #ff4444;
+  transition: color 0.3s ease;
+}
+
+.links a:hover i {
+  color: white;
+}
+
