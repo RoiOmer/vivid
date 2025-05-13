@@ -314,6 +314,7 @@ body {
 }
 
 /* Geometric Lines Layer */
+/* Geometric Lines Layer */
 #geometric-lines {
   position: fixed;
   top: 0;
@@ -321,18 +322,20 @@ body {
   width: 100%;
   height: 100%;
   background-image: 
-    linear-gradient(45deg, rgba(255, 68, 68, 0.05) 1px, transparent 1px),
-    linear-gradient(-45deg, rgba(255, 68, 68, 0.05) 1px, transparent 1px);
+    linear-gradient(45deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(-45deg, rgba(255, 68, 68, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: 0;
+  pointer-events: none;
   animation: moveLines 20s linear infinite;
 }
 
-/* Move the lines slowly */
+/* Animate the lines */
 @keyframes moveLines {
   0% { background-position: 0 0, 0 0; }
   100% { background-position: 100px 100px, -100px -100px; }
 }
+
 
 
 
