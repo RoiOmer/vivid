@@ -23,13 +23,13 @@ html, body {
   100% { background-position: 0% 50%; }
 }
 
-/* Top Left Logo */
 #logo {
   position: fixed;
   top: 20px;
   left: 20px;
   z-index: 20;
 }
+
 
 #logo h2 {
   font-size: 1.2rem;
