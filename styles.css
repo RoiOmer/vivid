@@ -48,6 +48,7 @@ html, body {
 
 
 /* Loading Screen */
+/* Loading Screen */
 #loading-screen {
   position: fixed;
   width: 100%;
@@ -58,6 +59,25 @@ html, body {
   justify-content: center;
   z-index: 10;
 }
+
+/* Loading Text Animation */
+.loading-text {
+  font-size: clamp(1.5rem, 8vw, 3rem);
+  letter-spacing: 0.2rem;
+  color: #ff4444;
+  font-weight: bold;
+  animation: glow 2.5s ease-in-out infinite alternate;
+  text-shadow: 0 0 10px #ff4444aa;
+  text-align: center;
+  padding: 0 5vw;
+  word-break: break-word;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ff4444aa, 0 0 20px #ff0000aa; transform: scale(1); }
+  100% { text-shadow: 0 0 30px #ff4444, 0 0 60px #ff0000; transform: scale(1.05); }
+}
+
 
 /* Coral Animation */
 .coral-pulse {
