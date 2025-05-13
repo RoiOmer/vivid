@@ -4,5 +4,5 @@ window.addEventListener('load', () => {
     const main = document.getElementById('main-content');
     main.classList.remove('hidden');
     main.classList.add('visible');
-  }, 3500); // 3.5 seconds coral animation
+  }, 1800); // 3.5 seconds coral animation
 });
