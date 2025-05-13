@@ -308,11 +308,11 @@ body {
 }
 
 #logo svg {
-  width: 100%;
-  max-width: 600px;
+  width: 300px;
   height: auto;
   display: block;
 }
+
 
 
 
