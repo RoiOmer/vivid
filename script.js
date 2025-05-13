@@ -18,15 +18,18 @@ window.addEventListener('load', () => {
     generatePoints();
   }
 
-  function generatePoints() {
-    points = [];
-    for (let i = 0; i < 50; i++) {
-      points.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height
-      });
-    }
+function generatePoints() {
+  points = [];
+  for (let i = 0; i < 80; i++) { // More points for higher quality
+    points.push({
+      angle: Math.random() * Math.PI * 2,
+      radius: Math.random() * canvas.height / 2,
+      centerX: Math.random() * canvas.width,
+      centerY: Math.random() * canvas.height
+    });
   }
+}
+
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = 200; // Limit the canvas height to 200px
@@ -35,7 +38,8 @@ function resizeCanvas() {
 
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = 'rgba(255, 68, 68, 0.05)';
+  ctx.strokeStyle = 'rgba(255, 100, 100, 0.6)'; // Light red, more visible
+
   ctx.lineWidth = 1;
 
   for (let i = 0; i < points.length; i++) {
